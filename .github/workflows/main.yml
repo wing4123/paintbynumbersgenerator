@@ -48,7 +48,7 @@ jobs:
         CI: true
     - run: mkdir artifacts
     - name: Download a Build Artifact zip
-      uses: actions/download-artifact@v2.0.5
+      uses: actions/download-artifact@v4.2.1
       with:
         name: "pbn-cli-win"
         path: "./artifacts/pbn-cli-win.zip"
