@@ -6,7 +6,7 @@ on:
 jobs:
   build:
 
-    runs-on: windows-latest
+    runs-on: ubuntu-18.04
 
     strategy:
       matrix:
@@ -32,7 +32,7 @@ jobs:
     
     - run:  mkdir "out"
       name: "Create output directory"
-    - run: copy paint-by-numbers-generator-win.exe .\out\paint-by-numbers-generator-win.exe
+    - run: copy paint-by-numbers-generator-linux .\out\paint-by-numbers-generator-linux
       name: "Copy binary to out directory"
     - run: copy .\node_modules\canvas\build\Release\* .\out
       name: "Copy node-canvas binaries to output"
@@ -42,7 +42,7 @@ jobs:
     - uses: actions/upload-artifact@v4
       name: "Upload out as artifact"
       with:
-        name: pbn-cli-win
+        name: pbn-cli-linux
         path: .\out\*
       env:
         CI: true
