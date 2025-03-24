@@ -32,9 +32,9 @@ jobs:
     
     - run:  mkdir "out"
       name: "Create output directory"
-    - run: cp paint-by-numbers-generator-linux ./out\paint-by-numbers-generator-linux
+    - run: cp paint-by-numbers-generator-linux ./out/paint-by-numbers-generator-linux
       name: "Copy binary to out directory"
-    - run: cp ./node_modules/canvas/build/Release/* ./out
+    - run: cp -r ./node_modules/canvas/build/Release/* ./out
       name: "Copy node-canvas binaries to output"
     - run: rm *.pdb, *.ipdb, *.iobj
       name: "Cleanup unnecessary debug files"
@@ -43,7 +43,7 @@ jobs:
       name: "Upload out as artifact"
       with:
         name: pbn-cli-linux
-        path: ./out\*
+        path: ./out/*
       env:
         CI: true
     - run: mkdir artifacts
