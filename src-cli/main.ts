@@ -1,8 +1,8 @@
-import * as canvas from "canvas";
-import * as fs from "fs";
-import * as minimist from "minimist";
-import * as path from "path";
-import * as process from "process";
+import canvas from "canvas";
+import fs from "fs";
+import minimist from "minimist";
+import path from "path";
+import process from "process";
 import { ColorReducer } from "../src/colorreductionmanagement";
 import { RGB } from "../src/common";
 import { FacetBorderSegmenter } from "../src/facetBorderSegmenter";
