@@ -29,18 +29,11 @@ jobs:
       name: "Build cli to javascript"
     - run: pkg .
       name: "Package cli to single executable"
-    
-    - run:  mkdir "out"
-      name: "Create output directory"
-    - run: cp paint-by-numbers-generator ./out/paint-by-numbers-generator-linux
-      name: "Copy binary to out directory"
-    - run: cp -r ./node_modules/canvas/build/Release/* ./out
-      name: "Copy node-canvas binaries to output"
     - uses: actions/upload-artifact@v4
       name: "Upload out as artifact"
       with:
         name: pbn-cli-linux
-        path: ./out/*
+        path: ./paint-by-numbers-generator
       env:
         CI: true
     - run: mkdir artifacts
