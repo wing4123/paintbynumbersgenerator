@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "Paint by numbers generator",
   "bin": "./src-cli/main.js",
+  "pkg": {
+    "assets": [
+      "node_modules/canvas/build/Release/*.so.*"
+    ],
+    "targets": [
+      "node12-linux-x64"
+    ]
+  },
   "scripts": {
     "lite": "lite-server --port 10001",
     "start": "npm run lite"
