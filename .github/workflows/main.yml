@@ -32,7 +32,7 @@ jobs:
     
     - run:  mkdir "out"
       name: "Create output directory"
-    - run: cp paint-by-numbers-generator-linux ./out/paint-by-numbers-generator-linux
+    - run: cp paint-by-numbers-generator ./out/paint-by-numbers-generator-linux
       name: "Copy binary to out directory"
     - run: cp -r ./node_modules/canvas/build/Release/* ./out
       name: "Copy node-canvas binaries to output"
