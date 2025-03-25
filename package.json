@@ -7,7 +7,7 @@
     "lite": "lite-server --port 10001",
     "start": "npm run lite"
   },
-  "author": "drake7707",
+  "author": "wing4123",
   "devDependencies": {
     "@types/node": "^12.7.1",
     "lite-server": "^1.3.1"
@@ -16,7 +16,7 @@
     "@types/jquery": "^3.3.31",
     "@types/materialize-css": "^1.0.6",
     "@types/minimist": "^1.2.0",
-    "canvas": "2.5.0",
+    "canvas": "^2.10.2",
     "minimist": "^1.2.3",
     "svg2img": "^0.6.1"
   }
